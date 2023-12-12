@@ -3,7 +3,7 @@ import pgzrun
 import random
 
 WIDTH = 394
-HEIGHT = 600
+HEIGHT = 500
 
 bird = Actor('yellowbird-midflap')
 bird.pos = (75, HEIGHT/2)
@@ -43,10 +43,9 @@ def update_pipes():
             pipe_add_counter = PIPE_ADD_INTERVAL
 
 def create_pipe():
-    pipe_gap = random.choice(range(100, 125))
-    pipe_y = HEIGHT - pipe_gap
-    top_pipe = Actor('pipe-green-rotate', pos=(WIDTH, pipe_gap))
-    bottom_pipe = Actor('pipe-green', pos=(WIDTH, HEIGHT))
+    pipe_gap = random.choice(range(0, 76)) 
+    top_pipe = Actor('pipe-green-rotate', pos=(WIDTH, 50 - pipe_gap))
+    bottom_pipe = Actor('pipe-green', pos=(WIDTH, HEIGHT - 50 - pipe_gap))
     pipes.append(top_pipe)
     pipes.append(bottom_pipe)
 
