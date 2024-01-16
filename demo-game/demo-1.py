@@ -3,6 +3,8 @@ import pgzrun
 from random import randint
 import random
 
+TITLE = "Đừng để táo rơi"
+
 WIDTH = 800
 HEIGHT = 600
 RANGE_UP_LEVEL = {

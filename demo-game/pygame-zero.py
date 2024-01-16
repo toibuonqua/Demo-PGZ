@@ -50,5 +50,5 @@ def draw():
 def update():
     actor_run()
     bricks_fly()
-    
+
 pgzrun.go()
